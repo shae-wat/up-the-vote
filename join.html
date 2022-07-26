@@ -22,26 +22,29 @@
     border-color: #3e98a1;
   }
 
-  #logo-image {
+  .header-image {
     margin-top: -24px;
-    margin-bottom: -24px;
-    width: 30vw;
+    margin-bottom: 24px;
   }
 
   .secondary-content {
     margin-top: 64px;
   }
 
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
   @media only screen and (max-width: 768px) {
     .desktop-only {
       display: none;
     }
-    #logo-image {
+    .header-image {
       margin-top: -24px;
-      margin-bottom: -6px;
+      margin-bottom: 6px;
       margin-right: auto;
       margin-left: auto;
-      width: 70vw;
     }
   }
   @media only screen and (min-width: 769px) {
@@ -55,19 +58,12 @@
 <div class="page">
   {% include "breadcrumbs" %}
   <div class="row justify-content-center">
-    <div class="col-lg-9">
+    <div class="col-lg-8">
       <img
-        id="logo-image"
-        src="https://dsasf-62612.web.app/up-vote/logo-up-vote.png"
-        alt="Up the Vote with stairstep line over right-aligned words"
+        class="header-image"
+        src="https://dsasf-62612.web.app/up-vote/SF-Election-Participation-2011-2020.png"
+        alt="SF Election Participation: 2011-2020 Odd-year vs even-year voter turnout in San Francisco. Bar chart showing half voter participation every other year, 80% average even-year turnout and 43% average odd-year turnout"
       />
-      {% if page.headline.size > 0 %}
-      <h2 class="page-headline">{{ page.headline }}</h2>
-      {% endif %} {% if page.signup.content.size > 0 %}
-      <div class="page-content">
-        {{ page.signup.content }}
-      </div>
-      {% endif %}
       <p>
         While voters are serious about turnout in the larger national elections
         during even years, average San Francisco voter participation plummets to
@@ -93,7 +89,11 @@
         Voter participation is a cornerstone civil rights issue and it is up to
         us to make sure our voices are heard!
       </p>
-
+      <img
+        class="graphic-content"
+        src="https://dsasf-62612.web.app/up-vote/logo-up-vote.png"
+        alt="Up the Vote with stairstep line over right-aligned words"
+      />
       <div class="card card-lg mt-5">
         <div class="card-body">
           <div class="form">
