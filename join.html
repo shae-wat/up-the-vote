@@ -23,7 +23,7 @@
   }
 
   .header-image {
-    margin-top: -24px;
+    margin-top: 0;
     margin-bottom: 24px;
   }
 
@@ -36,12 +36,16 @@
     margin-bottom: 24px;
   }
 
+  #custom-checkbox {
+    display: none;
+  }
+
   @media only screen and (max-width: 768px) {
     .desktop-only {
       display: none;
     }
     .header-image {
-      margin-top: -24px;
+      margin-top: 0;
       margin-bottom: 6px;
       margin-right: auto;
       margin-left: auto;
@@ -52,6 +56,19 @@
       display: none;
     }
   }
+
+  .title-block {
+    text-align: center;
+  }
+
+  .title-for {
+    margin-top: -6px;
+  }
+
+  .title-nov {
+    color: #666;
+    size: 90%;
+  }
 </style>
 {% include "translation" %} {% include "social_share_widget" %}
 
@@ -59,6 +76,11 @@
   {% include "breadcrumbs" %}
   <div class="row justify-content-center">
     <div class="col-lg-8">
+      <div class="title-block">
+        <h1 class="title-yes">Vote YES!</h1>
+        <h2 class="title-for">for the Voter Participation Act</h2>
+        <h3 class="title-nov">November 2022 Ballot Measure</h3>
+      </div>
       <img
         class="header-image"
         src="https://dsasf-62612.web.app/up-vote/SF-Election-Participation-2011-2020.png"
@@ -70,9 +92,11 @@
         just 43% in odd years.
       </p>
       <p>
-        The Voter Participation Act is a ballot measure that would move odd-year
-        municipal elections to even-years — when most people in San Francisco
-        show up to vote.
+        <strong>
+          The Voter Participation Act is a ballot measure that would move
+          odd-year municipal elections to even-years — when most people in San
+          Francisco show up to vote.
+        </strong>
       </p>
       <p>
         Moving the election for Mayor, Sheriff, District Attorney, City
