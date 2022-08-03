@@ -1,0 +1,7 @@
+
+
+chart blue: #0D7CBD
+
+chart red: #F30906
+
+chart gray: #545454
