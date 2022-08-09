@@ -20,7 +20,12 @@
   .h4,
   .h5,
   .h6 {
+    font-weight: bolder;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  }
+
+  h3 {
+    color: #f30906;
   }
 
   button.btn-primary,
@@ -36,6 +41,10 @@
     color: #ffffff !important;
     background-color: #9a8abb;
     border-color: #9a8abb;
+  }
+
+  .page-content {
+    margin-top: 48px;
   }
 
   .header-image {
@@ -119,24 +128,14 @@
 </style>
 
 <div class="page">
-  <div
-    class="page-inner{% unless page.basic.content.size > 0 %}{% if page.is_homepage? %} pt-0{% endif %}{% endunless %}{% if page.is_homepage? == true and site.page_tags contains 'homepage' and page.show_stream? == false %} pb-0{% endif %}"
-  >
-    {% include "breadcrumbs" %}
-    <div class="row justify-content-center">
-      <div
-        class="{% if page.is_homepage? == true and site.page_tags contains 'homepage' %}col{% else %}col-lg-9{% endif %}"
-      >
-        {% if page.headline.size > 0 %}
-        <h2 class="page-headline">{{ page.headline }}</h2>
-        {% endif %} {% if page.basic.content.size > 0 %}
-        <div class="page-content">
-          {{ page.basic.content }}
-        </div>
-        {% endif %} {% include "page_tags" with page %} {% if page.is_homepage?
-        == true and site.page_tags contains "homepage" %} {% tag "homepage" with
-        "homepage_widget" %} {% endif %}
-      </div>
+  {% include "breadcrumbs" %}
+  <div class="row justify-content-center">
+    <strong><h1>{{ page.headline }}</h1></strong>
+    <div class="page-content col-lg-12">
+      {{ page.basic.content }}
     </div>
+    {% include "page_tags" with page %} {% if page.is_homepage? == true and
+    site.page_tags contains "homepage" %} {% tag "homepage" with
+    "homepage_widget" %} {% endif %}
   </div>
 </div>
