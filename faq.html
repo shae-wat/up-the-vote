@@ -124,6 +124,9 @@
       margin-top: -8px;
       line-height: 1;
     }
+    .page-content {
+      padding: 48px 0;
+    }
   }
   @media only screen and (min-width: 769px) {
     .mobile-only {
@@ -141,9 +144,7 @@
       <div
         class="{% if page.is_homepage? == true and site.page_tags contains 'homepage' %}col{% else %}col-lg-9{% endif %}"
       >
-        {% if page.headline.size > 0 %}
-        <h2 class="page-headline">{{ page.headline }}</h2>
-        {% endif %} {% if page.basic.content.size > 0 %}
+        <h1 class="page-headline">{{ page.headline }}</h1>
         <div class="page-content">
           <h4>
             <strong
@@ -200,13 +201,15 @@
             <p>
               By not having these elections in 2023 the City Controller
               estimated about $7 million in savings for next year and we don’t
-              have to add another election to our schedule after voting several
-              times in the past year in special elections.
+              have to add another election to our schedule for 2023.
             </p>
           </div>
 
           <h4>
-            <strong>Are those stats really for San Francisco?</strong>
+            <strong
+              >San Francisco generally has high voter engagement. Will this
+              measure make a significant difference here?</strong
+            >
           </h4>
           <div class="card">
             <p>
@@ -223,7 +226,8 @@
             <p>
               We have an opportunity to double — and in the case of the youth
               quadruple — the number of people showing up to vote for important
-              officials in San Francisco and save the City money.
+              officials in San Francisco by simply moving these elections to
+              presidential year cycles.
             </p>
           </div>
 
@@ -264,26 +268,13 @@
               Supervisor Dean Preston put the San Francisco Voter Participation
               Act on ballot with the support of Supervisors Ronen, Stefani,
               Peskin, Chan, Safai, and Melgar— so it's broadly supported by
-              progressive and moderate SF supervisors.
+              progressive and moderate SF supervisors. It is endorsed by many
+              members of the DCCC and members of City College Board of Trustees.
             </p>
             <p>
-              It is endorsed by good governement, non-partisan voting rights
+              It is endorsed by good government, non-partisan voting rights
               organizations like California Common Cause, League of Women
-              Voters, RepresentUs, Advancing Justice- Asian Law Caucus.
-            </p>
-          </div>
-
-          <h4>
-            <strong
-              >Why didn't the Board of Supervisors amend the Charter themselves
-              if it's so commonsense and about compliance with SB415? Why did
-              this get pushed to the voters?</strong
-            >
-          </h4>
-          <div class="card">
-            <p>
-              The Board cannot unanimously change the Charter, it requires that
-              the issue be sent to the voters.
+              Voters, RepresentUs, and Advancing Justice- Asian Law Caucus.
             </p>
           </div>
 
@@ -304,7 +295,7 @@
             </p>
           </div>
 
-          {% endif %} {% include "page_tags" with page %}
+          {% include "page_tags" with page %}
         </div>
       </div>
     </div>
