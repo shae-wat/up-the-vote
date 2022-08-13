@@ -1,0 +1,312 @@
+<style>
+  a {
+    color: #2b3990;
+  }
+
+  a:hover {
+    color: #9a8abb !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .form-errors .errorExplanation h2,
+  .page-headline,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-weight: bolder;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  }
+
+  h4 {
+    color: #0d7cbd;
+  }
+
+  .card {
+    padding: 24px;
+    margin: 24px 0 64px 0;
+  }
+
+  button.btn-primary,
+  input.btn-primary,
+  a.btn-primary {
+    color: #000000;
+    background-color: #0d7cbd;
+    border-color: #0d7cbd;
+  }
+  button.btn-primary:hover,
+  input.btn-primary:hover,
+  a.btn-primary:hover {
+    color: #ffffff !important;
+    background-color: #9a8abb;
+    border-color: #9a8abb;
+  }
+
+  .page-content {
+    padding: 48px 24px;
+  }
+
+  .header-image {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  .nav-item-login {
+    display: none;
+  }
+
+  .navbar-nav-primary {
+    margin-right: 12px;
+  }
+
+  .nav-link {
+    margin-right: 36px;
+  }
+
+  .secondary-content {
+    margin-top: 64px;
+  }
+
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  #custom-checkbox {
+    display: none;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title-yes {
+    font-weight: 900;
+  }
+
+  .title-for {
+    margin-top: -16px;
+    font-weight: 900;
+  }
+
+  .title-nov {
+    margin-top: 12px;
+    color: #666;
+  }
+
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .custom-control {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .header-image {
+      margin-top: 0;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .title-for {
+      margin-top: -8px;
+      line-height: 1;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+</style>
+
+<div class="page">
+  <div
+    class="page-inner{% unless page.basic.content.size > 0 %}{% if page.is_homepage? %} pt-0{% endif %}{% endunless %}{% if page.is_homepage? == true and site.page_tags contains 'homepage' and page.show_stream? == false %} pb-0{% endif %}"
+  >
+    {% include "breadcrumbs" %}
+    <div class="row justify-content-center">
+      <div
+        class="{% if page.is_homepage? == true and site.page_tags contains 'homepage' %}col{% else %}col-lg-9{% endif %}"
+      >
+        {% if page.headline.size > 0 %}
+        <h2 class="page-headline">{{ page.headline }}</h2>
+        {% endif %} {% if page.basic.content.size > 0 %}
+        <div class="page-content">
+          <h4>
+            <strong
+              >I heard this changes the signature threshold for ballot measures.
+              Can you explain that?</strong
+            >
+          </h4>
+          <div class="card">
+            <p>
+              Currently, signature thresholds are based on the turnout for the
+              Mayoral race, doubling turnout for the Mayoral race would double
+              the signature threshold needed.
+            </p>
+            <p>
+              So the signature threshold was adjusted to be 2% of the number of
+              registered voters, intending for about the same number threshold.
+            </p>
+            <p>
+              A percentage of registered voters being the base for signature
+              thresholds makes more democratic sense than counting on low
+              Mayoral race voter turnout.
+            </p>
+          </div>
+
+          <h4>
+            <strong
+              >Won’t we lose the opportunity to pass important bonds/ballot
+              measures?</strong
+            >
+          </h4>
+          <div class="card">
+            <p>
+              We should be maximizing the number of people voting for these
+              bonds and measures for them to be truly democratic.
+            </p>
+            <p>
+              Popular measures will pass more easily with a broad voter base
+              participating in the election. Off-cycle elections can favor
+              big-money interests since funding simply goes to a
+              get-out-the-vote effort for specific groups to show up for the
+              vote.
+            </p>
+          </div>
+
+          <h4>
+            <strong>Will this give another year to the Mayor?</strong>
+          </h4>
+          <div class="card">
+            <p>
+              Next year, 2023, the election for Mayor, Sheriff, District
+              Attorney, City Attorney, and Treasurer will be rescheduled to
+              2024, giving these offices another year before the 2024 election.
+            </p>
+            <p>
+              By not having these elections in 2023 the City Controller
+              estimated about $7 million in savings for next year and we don’t
+              have to add another election to our schedule after voting several
+              times in the past year in special elections.
+            </p>
+          </div>
+
+          <h4>
+            <strong>Are those stats really for San Francisco?</strong>
+          </h4>
+          <div class="card">
+            <p>
+              San Francisco turnout is dismal on odd-year elections. 43% of
+              voters on average in odd-years for the local Mayor, Sheriff,
+              District Attorney, City Attorney, and Treasurer race versus double
+              — 80% in presidential year election cycles.
+            </p>
+            <p>
+              There was a citywide turnout of 41% of registered voters in
+              November 2019 and 86% in November 2020. In 2020, 79% San Francisco
+              youth under age 24 voted versus only 21% in 2019.
+            </p>
+            <p>
+              We have an opportunity to double — and in the case of the youth
+              quadruple — the number of people showing up to vote for important
+              officials in San Francisco and save the City money.
+            </p>
+          </div>
+
+          <h4>
+            <strong
+              >Won’t this make an already long presidential ballot even
+              longer?</strong
+            >
+          </h4>
+          <div class="card">
+            <p>
+              This will make the presidential ballot longer, but the tradeoff is
+              that it would ensure the most powerful people in the City are
+              being elected when voters actually show up to vote. Most people in
+              SF know how they are voting for president, VP, etc but we are
+              currently missing their voices for the local offices of Mayor,
+              Sheriff, District Attorney, City Attorney, and Treasurer.
+            </p>
+            <p>
+              In 2020 local propositions at the end of the presidential year
+              ballot saw 6-7% loss in voter participation due to undervoting— so
+              it would take at least 8-10 times as many undervotes as
+              end-of-ballot local props to even compare to the lack of
+              participation we are seeing in odd-year elections.
+            </p>
+            <p>
+              We want inspiring and exciting candidates for these local races
+              that voters will not skip on after they are able to make it to the
+              ballot.
+            </p>
+          </div>
+
+          <h4>
+            <strong>Who has endorsed this?</strong>
+          </h4>
+          <div class="card">
+            <p>
+              Supervisor Dean Preston put the San Francisco Voter Participation
+              Act on ballot with the support of Supervisors Ronen, Stefani,
+              Peskin, Chan, Safai, and Melgar— so it's broadly supported by
+              progressive and moderate SF supervisors.
+            </p>
+            <p>
+              It is endorsed by good governement, non-partisan voting rights
+              organizations like California Common Cause, League of Women
+              Voters, RepresentUs, Advancing Justice- Asian Law Caucus.
+            </p>
+          </div>
+
+          <h4>
+            <strong
+              >Why didn't the Board of Supervisors amend the Charter themselves
+              if it's so commonsense and about compliance with SB415? Why did
+              this get pushed to the voters?</strong
+            >
+          </h4>
+          <div class="card">
+            <p>
+              The Board cannot unanimously change the Charter, it requires that
+              the issue be sent to the voters.
+            </p>
+          </div>
+
+          <h4>
+            <strong
+              >I would like to better understand how this will impact recall
+              elections.</strong
+            >
+          </h4>
+          <div class="card">
+            <p>
+              This measure impacts the scheduling of odd-year elections for the
+              offices of the Mayor, Sheriff, District Attorney, City Attorney,
+              and Treasurer.
+            </p>
+            <p>
+              It does NOT impact special elections like recalls.
+            </p>
+          </div>
+
+          {% endif %} {% include "page_tags" with page %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
