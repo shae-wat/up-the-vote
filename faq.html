@@ -1,6 +1,6 @@
 <style>
   a {
-    color: #2b3990;
+    color: #0d7cbd;
   }
 
   a:hover {
@@ -136,181 +136,173 @@
 </style>
 
 <div class="page">
-  <div
-    class="page-inner{% unless page.basic.content.size > 0 %}{% if page.is_homepage? %} pt-0{% endif %}{% endunless %}{% if page.is_homepage? == true and site.page_tags contains 'homepage' and page.show_stream? == false %} pb-0{% endif %}"
-  >
-    {% include "breadcrumbs" %}
-    <div class="row justify-content-center">
-      <div
-        class="{% if page.is_homepage? == true and site.page_tags contains 'homepage' %}col{% else %}col-lg-9{% endif %}"
-      >
-        <h1 class="page-headline">{{ page.headline }}</h1>
-        <div class="page-content">
-          <h4>
-            <strong
-              >I heard this changes the signature threshold for ballot measures.
-              Can you explain that?</strong
-            >
-          </h4>
-          <div class="card">
-            <p>
-              Currently, signature thresholds are based on the turnout for the
-              Mayoral race, doubling turnout for the Mayoral race would double
-              the signature threshold needed.
-            </p>
-            <p>
-              So the signature threshold was adjusted to be 2% of the number of
-              registered voters, intending for about the same number threshold.
-            </p>
-            <p>
-              A percentage of registered voters being the base for signature
-              thresholds makes more democratic sense than counting on low
-              Mayoral race voter turnout.
-            </p>
-          </div>
-
-          <h4>
-            <strong
-              >Won’t we lose the opportunity to pass important bonds/ballot
-              measures?</strong
-            >
-          </h4>
-          <div class="card">
-            <p>
-              We should be maximizing the number of people voting for these
-              bonds and measures for them to be truly democratic.
-            </p>
-            <p>
-              Popular measures will pass more easily with a broad voter base
-              participating in the election. Off-cycle elections can favor
-              big-money interests since funding simply goes to a
-              get-out-the-vote effort for specific groups to show up for the
-              vote.
-            </p>
-          </div>
-
-          <h4>
-            <strong>Will this give another year to the Mayor?</strong>
-          </h4>
-          <div class="card">
-            <p>
-              Next year, 2023, the election for Mayor, Sheriff, District
-              Attorney, City Attorney, and Treasurer will be rescheduled to
-              2024, giving these offices another year before the 2024 election.
-            </p>
-            <p>
-              By not having these elections in 2023 the City Controller
-              estimated about $7 million in savings for next year and we don’t
-              have to add another election to our schedule for 2023.
-            </p>
-          </div>
-
-          <h4>
-            <strong
-              >San Francisco generally has high voter engagement. Will this
-              measure make a significant difference here?</strong
-            >
-          </h4>
-          <div class="card">
-            <p>
-              San Francisco turnout is dismal on odd-year elections. 43% of
-              voters on average in odd-years for the local Mayor, Sheriff,
-              District Attorney, City Attorney, and Treasurer race versus double
-              — 80% in presidential year election cycles.
-            </p>
-            <p>
-              There was a citywide turnout of 41% of registered voters in
-              November 2019 and 86% in November 2020. In 2020, 79% San Francisco
-              youth under age 24 voted versus only 21% in 2019.
-            </p>
-            <p>
-              We have an opportunity to double — and in the case of the youth
-              quadruple — the number of people showing up to vote for important
-              officials in San Francisco by simply moving these elections to
-              presidential year cycles.
-            </p>
-          </div>
-
-          <h4>
-            <strong
-              >Won’t this make an already long presidential ballot even
-              longer?</strong
-            >
-          </h4>
-          <div class="card">
-            <p>
-              This will make the presidential ballot longer, but the tradeoff is
-              that it would ensure the most powerful people in the City are
-              being elected when voters actually show up to vote.
-            </p>
-            <p>
-              Most people in SF know how they are voting for president, VP, etc—
-              but we are currently missing their voices for the local offices of
-              Mayor, Sheriff, District Attorney, City Attorney, and Treasurer.
-            </p>
-            <p>
-              In 2020 local propositions at the end of the presidential year
-              ballot saw 6-7% loss in voter participation due to undervoting— so
-              it would take at least 8-10 times as many undervotes as
-              end-of-ballot local props to even compare to the lack of
-              participation we are seeing in odd-year elections.
-            </p>
-            <p>
-              We want inspiring and exciting candidates for these local races
-              that voters will not skip on after they are able to make it to the
-              ballot.
-            </p>
-          </div>
-
-          <h4>
-            <strong>Who has endorsed this?</strong>
-          </h4>
-          <div class="card">
-            <p>
-              Supervisor Dean Preston put the San Francisco Voter Participation
-              Act on ballot with the support of Supervisors Ronen, Stefani,
-              Peskin, Chan, Safai, and Melgar— so it's broadly supported by
-              progressive and moderate SF supervisors.
-            </p>
-            <p>
-              Endorsements were led by good government, non-partisan voting
-              rights organizations like California Common Cause, the League of
-              Women Voters of San Francisco, RepresentUs, and Advancing Justice-
-              Asian Law Caucus.
-            </p>
-            <p>
-              The Voter Participation Act is endorsed by influential
-              organizations like the San Francisco Democratic Party and San
-              Francisco Labor Council.
-            </p>
-            <p>
-              See
-              <a href="https://www.upthevotesf.com/endorsements"
-                >the endorsements page</a
-              >
-              for the full list of endorsements.
-            </p>
-          </div>
-
-          <h4>
-            <strong
-              >I would like to better understand how this will impact recall
-              elections.</strong
-            >
-          </h4>
-          <div class="card">
-            <p>
-              This measure impacts the scheduling of odd-year elections for the
-              offices of the Mayor, Sheriff, District Attorney, City Attorney,
-              and Treasurer.
-            </p>
-            <p>
-              It does NOT impact special elections like recalls.
-            </p>
-          </div>
-
-          {% include "page_tags" with page %}
+  {% include "breadcrumbs" %}
+  <div class="row justify-content-center">
+    <div
+      class="{% if page.is_homepage? == true and site.page_tags contains 'homepage' %}col{% else %}col-lg-9{% endif %}"
+    >
+      <h1>FAQ on Prop H</h1>
+      <div class="page-content">
+        <h4>
+          <strong
+            >I heard this changes the signature threshold for ballot measures.
+            Can you explain that?</strong
+          >
+        </h4>
+        <div class="card">
+          <p>
+            Currently, signature thresholds are based on the turnout for the
+            Mayoral race, doubling turnout for the Mayoral race would double the
+            signature threshold needed.
+          </p>
+          <p>
+            So the signature threshold was adjusted to be 2% of the number of
+            registered voters, intending for about the same number threshold.
+          </p>
+          <p>
+            A percentage of registered voters being the base for signature
+            thresholds makes more democratic sense than counting on low Mayoral
+            race voter turnout.
+          </p>
         </div>
+
+        <h4>
+          <strong
+            >Won’t we lose the opportunity to pass important bonds/ballot
+            measures?</strong
+          >
+        </h4>
+        <div class="card">
+          <p>
+            We should be maximizing the number of people voting for these bonds
+            and measures for them to be truly democratic.
+          </p>
+          <p>
+            Popular measures will pass more easily with a broad voter base
+            participating in the election. Off-cycle elections can favor
+            big-money interests since funding simply goes to a get-out-the-vote
+            effort for specific groups to show up for the vote.
+          </p>
+        </div>
+
+        <h4>
+          <strong>Will this give another year to the Mayor?</strong>
+        </h4>
+        <div class="card">
+          <p>
+            Next year, 2023, the election for Mayor, Sheriff, District Attorney,
+            City Attorney, and Treasurer will be rescheduled to 2024, giving
+            these offices another year before the 2024 election.
+          </p>
+          <p>
+            By not having these elections in 2023 the City Controller estimated
+            about $7 million in savings for next year and we don’t have to add
+            another election to our schedule for 2023.
+          </p>
+        </div>
+
+        <h4>
+          <strong
+            >San Francisco generally has high voter engagement. Will this
+            measure make a significant difference here?</strong
+          >
+        </h4>
+        <div class="card">
+          <p>
+            San Francisco turnout is dismal on odd-year elections. 43% of voters
+            on average in odd-years for the local Mayor, Sheriff, District
+            Attorney, City Attorney, and Treasurer race versus double — 80% in
+            presidential year election cycles.
+          </p>
+          <p>
+            There was a citywide turnout of 41% of registered voters in November
+            2019 and 86% in November 2020. In 2020, 79% San Francisco youth
+            under age 24 voted versus only 21% in 2019.
+          </p>
+          <p>
+            We have an opportunity to double — and in the case of the youth
+            quadruple — the number of people showing up to vote for important
+            officials in San Francisco by simply moving these elections to
+            presidential year cycles.
+          </p>
+        </div>
+
+        <h4>
+          <strong
+            >Won’t this make an already long presidential ballot even
+            longer?</strong
+          >
+        </h4>
+        <div class="card">
+          <p>
+            This will make the presidential ballot longer, but the tradeoff is
+            that it would ensure the most powerful people in the City are being
+            elected when voters actually show up to vote.
+          </p>
+          <p>
+            Most people in SF know how they are voting for president, VP, etc—
+            but we are currently missing their voices for the local offices of
+            Mayor, Sheriff, District Attorney, City Attorney, and Treasurer.
+          </p>
+          <p>
+            In 2020 local propositions at the end of the presidential year
+            ballot saw 6-7% loss in voter participation due to undervoting— so
+            it would take at least 8-10 times as many undervotes as
+            end-of-ballot local props to even compare to the lack of
+            participation we are seeing in odd-year elections.
+          </p>
+          <p>
+            We want inspiring and exciting candidates for these local races that
+            voters will not skip on after they are able to make it to the
+            ballot.
+          </p>
+        </div>
+
+        <h4>
+          <strong>Who has endorsed this?</strong>
+        </h4>
+        <div class="card">
+          <p>
+            Supervisor Dean Preston put the SF Voter Participation Act on the
+            ballot with the support of Supervisors Ronen, Stefani, Peskin, Chan,
+            Safai, and Melgar— so it's broadly supported by progressive and
+            moderate SF supervisors.
+          </p>
+          <p>
+            Endorsements were led by good government, non-partisan voting rights
+            organizations like California Common Cause, the League of Women
+            Voters of San Francisco, RepresentUs, and Advancing Justice- Asian
+            Law Caucus.
+          </p>
+          <p>
+            Prop H is endorsed by everyone from the San Francisco Democratic
+            Party to the San Francisco Labor Council and the Public Health
+            Justice Collective. See
+            <a href="https://www.upthevotesf.com/endorsements"
+              >the endorsements page</a
+            >
+            for the full list of endorsements.
+          </p>
+        </div>
+
+        <h4>
+          <strong
+            >I would like to better understand how this will impact recall
+            elections.</strong
+          >
+        </h4>
+        <div class="card">
+          <p>
+            This measure impacts the scheduling of odd-year elections for the
+            offices of the Mayor, Sheriff, District Attorney, City Attorney, and
+            Treasurer.
+          </p>
+          <p>
+            It does NOT impact special elections like recalls.
+          </p>
+        </div>
+
+        {% include "page_tags" with page %}
       </div>
     </div>
   </div>
