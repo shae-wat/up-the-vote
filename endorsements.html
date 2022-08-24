@@ -73,6 +73,23 @@
     margin-bottom: 24px;
   }
 
+  .card {
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
   #custom-checkbox {
     display: none;
   }
@@ -122,6 +139,9 @@
     .second-column {
       margin-top: 48px;
     }
+    .card-row {
+      flex-direction: column;
+    }
   }
   @media only screen and (min-width: 769px) {
     .mobile-only {
@@ -138,6 +158,77 @@
         Prop H Endorsements
       </h1></strong
     >
+    <div class="card">
+      <div class="card-row">
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-cc-ca.svg"
+          alt="California Common Cause"
+          width="244px"
+          height="auto"
+        />
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-lwvsf.png"
+          alt="League of Women Voters of San Francisco"
+          width="200px"
+          height="auto"
+        />
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sf-dem-party.png"
+          alt="San Francisco Democratic Party"
+          width="200px"
+          height="auto"
+        />
+      </div>
+      <div class="card-row">
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-adv-just.png"
+          alt="Asian Americans Advancing Justice- Asian Law Caucus"
+          width="200px"
+          height="auto"
+        />
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sierra-club.png"
+          alt="Sierra Club"
+          width="200px"
+          height="auto"
+        />
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-rep-us.png"
+          alt="RepresentUs"
+          width="200px"
+          height="auto"
+        />
+      </div>
+      <div class="card-row">
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-milk.png"
+          alt="Harvey Milk LGBTQ Democratic Club"
+          width="200px"
+          height="auto"
+        />
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sfwpc.png"
+          alt="San Francisco Women’s Political Committee"
+          width="200px"
+          height="auto"
+        />
+        <img
+          class="graphic-content"
+          src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sflc.png"
+          alt="San Francisco Labor Council"
+          width="200px"
+          height="auto"
+        />
+      </div>
+    </div>
     <div class="page-content col-lg-12">
       {{ page.basic.content }}
     </div>

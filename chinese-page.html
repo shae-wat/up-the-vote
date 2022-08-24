@@ -1,0 +1,129 @@
+<style>
+  a {
+    color: #2b3990;
+  }
+
+  a:hover {
+    color: #9a8abb !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .form-errors .errorExplanation h2,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  }
+
+  button.btn-primary,
+  input.btn-primary,
+  a.btn-primary {
+    color: #000000;
+    background-color: #0d7cbd;
+    border-color: #0d7cbd;
+  }
+  button.btn-primary:hover,
+  input.btn-primary:hover,
+  a.btn-primary:hover {
+    color: #ffffff !important;
+    background-color: #9a8abb;
+    border-color: #9a8abb;
+  }
+
+  .header-image {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  .nav-item-login {
+    display: none;
+  }
+
+  .navbar-nav-primary {
+    margin-right: 12px;
+  }
+
+  .nav-link {
+    margin-right: 36px;
+  }
+
+  .secondary-content {
+    margin-top: 64px;
+  }
+
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  #custom-checkbox {
+    display: none;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title-yes {
+    font-weight: 900;
+  }
+
+  .title-for {
+    margin-top: -16px;
+    font-weight: 900;
+  }
+
+  .title-nov {
+    margin-top: 12px;
+    color: #666;
+  }
+
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .custom-control {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .header-image {
+      margin-top: 0;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .title-for {
+      margin-top: -8px;
+      line-height: 1;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+</style>
+
+<div class="page">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <h2 class="page-headline">{{ page.headline }}</h2>
+      <div class="page-content">
+        {{ page.basic.content }}
+      </div>
+    </div>
+  </div>
+</div>
