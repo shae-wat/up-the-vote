@@ -13,8 +13,6 @@
         background-color: #ffffff;
         -webkit-text-size-adjust: none;
         -ms-text-size-adjust: none;
-      }
-      body {
         color: #333333;
         font-family: Helvetica Neue, Helvetica, Arial, Calibri, sans-serif;
         margin: 0;
@@ -31,22 +29,36 @@
       p {
         margin-bottom: 1em;
       }
+      .body-content img {
+        width: 100%;
+        max-width: 100% !important;
+        height: auto;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
       img {
-        max-width: 100%;
+        width: 100%;
+        max-width: 100% !important;
+        height: auto;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+      a {
+        color: #2b3990;
       }
 
-      /* Give content more room on mobile */
-      @media screen and (max-width: 480px) {
-        div[class="body-content"]img {
-          width: 100%;
-        }
+      a:hover {
+        color: #9a8abb !important;
       }
 
-      /* Styles for forcing columns to rows */
       @media screen and (max-width: 600px) {
-        /* force container columns to (horizontal) blocks */
         table[class="container"] {
           width: 100% !important;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        div[class="body-content"] img {
+          width: 100%;
         }
       }
     </style>
@@ -102,74 +114,63 @@
                 {{ body }}
               </td>
             </tr>
-            <tr>
-              <td
-                style="
-                  text-align: left;
-                  font-family: Helvetica Neue, Helvetica, Arial, Calibri,
-                    sans-serif;
-                  padding-left: 15px;
-                  padding-right: 15px;
-                  padding-top: 30px;
-                "
-              >
-                -=-=-
-                <p style="color: #333333; font-size: 14px; line-height: 1.5;">
-                  {{ settings.official_name }}{% if settings.has_address? %}
-                  &middot; {{ settings.address.one_line }} {% endif %}
-                  <br />This email was sent to
-                  <a style="color: #1488b9;" href="mailto:{{ recipient.email }}"
-                    >{{ recipient.email }}</a
-                  >. To stop receiving emails,
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ settings.site.unsubscribe_url }}"
-                    >click here</a
-                  >. {% if broadcaster.has_twitter? or broadcaster.has_facebook?
-                  %} <br />You can also keep up with {{ broadcaster.name }} {%
-                  if broadcaster.has_twitter? and broadcaster.has_facebook_page?
-                  %} on
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.twitter_profile_url }}"
-                    >Twitter</a
-                  >
-                  or
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.facebook_page_profile_url }}"
-                    >Facebook</a
-                  >. {% elsif broadcaster.has_twitter? %} on
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.twitter_profile_url }}"
-                    >Twitter</a
-                  >. {% elsif broadcaster.has_facebook_page? %} on
-                  <a
-                    style="color: #1488b9;"
-                    href="{{ broadcaster.facebook_page_profile_url }}"
-                    >Facebook</a
-                  >. {% endif %} {% endif %}
-                </p>
-                -=-=-
-              </td>
-            </tr>
           </table>
-          <p
+          <div
             style="
-              font-family: Helvetica Neue, Helvetica, Arial, Calibri, sans-serif;
-              color: #414141;
-              font-size: 13px;
-              padding: 0;
-              line-height: 1.6;
-              text-align: center;
+              background-color: #fbfbfb !important;
+              width: 100%;
+              padding: 24px;
             "
           >
-            Created with
-            <a href="https://nationbuilder.com" style="color: #1488b9;"
-              >NationBuilder</a
-            >, software for leaders.
-          </p>
+            <p
+              style="
+                color: #333333;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-top: 24px;
+              "
+            >
+              You can keep up with the Yes on H Voter Participation Act campaign
+              on
+              <a href="https://www.instagram.com/yesonhsf">Instagram</a>.
+            </p>
+            <div style="margin: auto; text-align: center; font-size: 14px;">
+              <br />
+              <p style="line-height: 1;">
+                <u>Paid for by Activate Housing FPPC ID 1450357.</u>
+              </p>
+              <p style="line-height: 1;">
+                <u
+                  >Financial disclosures are available at
+                  <a href="https://sfethics.org/">sfethics.org</a></u
+                >
+              </p>
+            </div>
+            <p style="color: #333333; font-size: 14px; line-height: 1.5;">
+              <br />This email was sent to
+              <a style="color: #1488b9;" href="mailto:{{ recipient.email }}"
+                >{{ recipient.email }}</a
+              >. To stop receiving emails,
+              <a
+                style="color: #1488b9;"
+                href="{{ settings.site.unsubscribe_url }}"
+                >click here</a
+              >.
+            </p>
+            <p
+              style="
+                font-family: Helvetica Neue, Helvetica, Arial, Calibri,
+                  sans-serif;
+                color: #414141;
+                font-size: 13px;
+                padding: 0;
+                line-height: 1.6;
+                text-align: center;
+              "
+            >
+              Created with NationBuilder
+            </p>
+          </div>
           <!-- ### 600PX CONTAINER ###  -->
         </td>
       </tr>
