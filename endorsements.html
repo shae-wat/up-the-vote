@@ -230,12 +230,12 @@
           />
         </div>
       </div>
-      <div class="page-content col-lg-12">
-        {{ page.basic.content }}
-      </div>
-      {% include "page_tags" with page %} {% if page.is_homepage? == true and
-      site.page_tags contains "homepage" %} {% tag "homepage" with
-      "homepage_widget" %} {% endif %}
     </div>
+    <div class="page-content col-lg-12">
+      {{ page.basic.content }}
+    </div>
+    {% include "page_tags" with page %} {% if page.is_homepage? == true and
+    site.page_tags contains "homepage" %} {% tag "homepage" with
+    "homepage_widget" %} {% endif %}
   </div>
 </div>
