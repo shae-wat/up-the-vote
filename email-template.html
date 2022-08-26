@@ -8,16 +8,17 @@
     <!-- disable auto telephone linking in iOS -->
     <title>NationBuilder</title>
     <style type="text/css">
-      /* Resets:see reset.css for details */
+      /* Resets: see reset.css for details */
       body {
-        background-color: #ffffff;
         -webkit-text-size-adjust: none;
         -ms-text-size-adjust: none;
         color: #333333;
+        background-color: #ffffff;
         font-family: Helvetica Neue, Helvetica, Arial, Calibri, sans-serif;
         margin: 0;
         padding: 0;
       }
+
       table {
         border-spacing: 0;
         border-collapse: collapse;
@@ -31,26 +32,26 @@
       }
       .body-content img {
         width: 100%;
-        max-width: 100% !important;
+        max-width: 100%;
         height: auto;
         margin-top: 24px;
         margin-bottom: 24px;
       }
-      img {
+      .logo {
         width: 100%;
-        max-width: 100% !important;
         height: auto;
-        margin-top: 24px;
-        margin-bottom: 24px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #f30906;
       }
       a {
-        color: #2b3990;
+        color: #0d7cbd;
       }
-
-      a:hover {
-        color: #9a8abb !important;
-      }
-
       @media screen and (max-width: 600px) {
         table[class="container"] {
           width: 100% !important;
@@ -100,44 +101,72 @@
             <tr>
               <td
                 style="
+                  text-align: left;
                   font-family: Helvetica Neue, Helvetica, Arial, Calibri,
                     sans-serif;
                   padding-left: 15px;
                   padding-right: 15px;
+                "
+              >
+                <div style="margin: auto;">
+                  <a href="https://www.upthevotesf.com/">
+                    <img
+                      id="logo-image-empty-homes-tax"
+                      src="https://dsasf-62612.web.app/up-vote/banner-title.png"
+                      width="100%"
+                      alt="Yes on H- Move local elections to even years and double voter participation!"
+                    />
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  font-size: 16px;
+                  font-family: Helvetica Neue, Helvetica, Arial, Calibri,
+                    sans-serif;
+                  line-height: 1.5em;
+                  padding-left: 15px;
+                  padding-right: 15px;
                   padding-top: 30px;
                   text-align: left;
-                  line-height: 1.5;
-                  font-size: 16px;
                 "
                 class="body-content"
               >
                 {{ body }}
               </td>
             </tr>
+            <tr>
+              <td
+                style="
+                  font-family: Helvetica Neue, Helvetica, Arial, Calibri,
+                    sans-serif;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  padding-top: 30px;
+                "
+              >
+                <p
+                  style="
+                    color: #333333;
+                    font-size: 16px;
+                    line-height: 1.6;
+                    margin-top: 24px;
+                  "
+                >
+                  You can keep up with the Yes on H Voter Participation Act
+                  campaign on
+                  <a href="https://www.instagram.com/yesonhsf">Instagram</a>.
+                </p>
+              </td>
+            </tr>
           </table>
-          <div
-            style="
-              background-color: #fbfbfb !important;
-              width: 100%;
-              padding: 24px;
-            "
-          >
-            <p
-              style="
-                color: #333333;
-                font-size: 16px;
-                line-height: 1.6;
-                margin-top: 24px;
-              "
-            >
-              You can keep up with the Yes on H Voter Participation Act campaign
-              on
-              <a href="https://www.instagram.com/yesonhsf">Instagram</a>.
-            </p>
+          <div style="background-color: #fbfbfb;">
             <div style="margin: auto; text-align: center; font-size: 14px;">
               <br />
               <p style="line-height: 1;">
-                <u>Paid for by Activate Housing FPPC ID 1450357.</u>
+                <u>Paid for by Up the Vote Yes on H FPPC ID 1450357.</u>
               </p>
               <p style="line-height: 1;">
                 <u
@@ -148,21 +177,16 @@
             </div>
             <p style="color: #333333; font-size: 14px; line-height: 1.5;">
               <br />This email was sent to
-              <a style="color: #1488b9;" href="mailto:{{ recipient.email }}"
-                >{{ recipient.email }}</a
-              >. To stop receiving emails,
-              <a
-                style="color: #1488b9;"
-                href="{{ settings.site.unsubscribe_url }}"
-                >click here</a
-              >.
+              <a href="mailto:{{ recipient.email }}">{{ recipient.email }}</a>.
+              To stop receiving emails,
+              <a href="{{ settings.site.unsubscribe_url }}">click here</a>.
             </p>
             <p
               style="
+                font-size: 13px;
                 font-family: Helvetica Neue, Helvetica, Arial, Calibri,
                   sans-serif;
                 color: #414141;
-                font-size: 13px;
                 padding: 0;
                 line-height: 1.6;
                 text-align: center;
