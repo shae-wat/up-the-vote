@@ -132,6 +132,7 @@
     }
   }
 </style>
+
 {% include "translation" %}
 
 {% capture form %}
@@ -465,7 +466,6 @@
     </div>
   {% endform_for %}
 {% endcapture %}
-
 <div class="header-img-wrap pb-4 pt-lg-4">
   <header id="header" class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="/">
@@ -628,11 +628,15 @@
     <!-- /_nav.html -->
   </header>
 </div>
-  <main id="content" class="bg-white" role="main">
-    <div class="page" >
 
-    <div class="col-lg-9" style="margin-left: auto; margin-right: auto;">
-      <div class="title-block">
+<!-- _features.html -->
+
+<!-- /_features.html -->
+
+<main id="content" class="bg-white" role="main">
+  <div class="page">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
         <div style="margin: auto; margin-bottom: 48px;">
           <a href="https://www.upthevotesf.com/">
             <img
@@ -644,16 +648,16 @@
           </a>
         </div>
         <strong>
-          <h1 class="title-yes">Donate</h1
+          <h1 class="title-yes" style="margin-left: auto; margin-right: auto; margin-bottom: 48px;">Donate</h1
         </strong>
       </div>
-
-          {{ form }}
-        </div>
-        </div>
-          </main>
-    {% include "footer" %}
-
+      <div class="col-lg-9" style="margin-left: auto; margin-right: auto;">
+        {{ form }}
+      </div>
+    </div>
+  </div>
+</main>
+{% include "footer" %}
 
 <script>
   var currentLocale = "{{ current_language }}";
