@@ -371,19 +371,10 @@
               Sign up to receive news and updates
             </h3>
             <br />
-            {% form_for signup %} {% if request.sorta_logged_in? %}
-            <div class="mb-4">
-              <h3 class="mb-4 h4">{{ t_signup_will_you_join }}</h3>
-              {% if request.logged_in? == false %}
-              <p>{{ t_account_not_you_sign_out }}</p>
-              {% endif %}
-            </div>
-            {% endif %}
+            {% form_for signup %}
 
             <div class="form-errors">{% error_messages_for signup %}</div>
 
-            {% if request.sorta_logged_in? == false or
-            request.current_signup.has_mobile? == false %}
             <div class="form-group">
               <div class="float-label">
                 <label for="signup_email">{{ t_forms_email }}</label>
@@ -391,33 +382,19 @@
               </div>
             </div>
 
-            {% endif %} {% if page.signup.is_address? %} {% if
-            request.sorta_logged_in? == false or
-            request.current_signup.has_full_address? == false %} {% include
-            "page_address_inputs" wide: true %} {% endif %} {% endif %} {% if
-            page.signup.has_labeled_tags? %} {% include "labeled_tags" %} {%
-            endif %} {% if page.signup.is_volunteers? and
-            site.ask_for_volunteers? %} {% if request.sorta_logged_in? == false
-            or request.current_signup.is_volunteer == false %}
+            {% if page.signup.is_address? %} {% if request.sorta_logged_in? ==
+            false or request.current_signup.has_full_address? == false %} {%
+            include "page_address_inputs" wide: true %} {% endif %} {% endif %}
+            {% if page.signup.has_labeled_tags? %} {% include "labeled_tags" %}
+            {% endif %} {% if page.signup.is_volunteers? and
+            site.ask_for_volunteers? %}
             <div class="form-group custom-control custom-checkbox">
               {% check_box "is_volunteer", class:"custom-control-input" %}
               <label class="custom-control-label" for="signup_is_volunteer"
                 >{{ t_forms_want_to_volunteer }}</label
               >
             </div>
-            {% endif %} {% endif %}
-
-            <div class="form-group custom-control custom-checkbox">
-              {% check_box "activity_is_private", class:"custom-control-input"
-              %}
-              <label
-                for="signup_activity_is_private"
-                class="custom-control-label"
-                >{{ t_forms_dont_publish_this }}</label
-              >
-            </div>
-
-            {% if request.sorta_logged_in? == false or
+            {% endif %} {% if request.sorta_logged_in? == false or
             request.current_signup.has_mobile? == false %} {% unless
             page.show_consent_form? %}
             <div class="form-group">
@@ -440,10 +417,7 @@
             </div>
             {% endif %} {% endunless %} {% endif %} {% if
             page.show_consent_form? %} {% include "consent_form" %} {% endif %}
-            {% if page.signup.is_all_info_collected? == false %} {% if
-            request.sorta_logged_in? %} {% include "form_submit_tag", label:
-            t_forms_update_info %} {% else %} {% include "form_submit_tag",
-            label: "Join our mailing list" %} {% endif %} {% endif %} {%
+            {% include "form_submit_tag", label: "Join our mailing list" %} {%
             endform_for %} {% if page.text_keyword_instructions.size > 0 %}
             <div class="form-group py-2">
               {{ page.text_keyword_instructions }}
