@@ -84,10 +84,6 @@
     justify-content: space-between;
   }
 
-  #custom-checkbox {
-    display: none;
-  }
-
   .title-block {
     text-align: center;
     margin-bottom: 24px;
@@ -112,8 +108,12 @@
     color: #666;
   }
 
-  .custom-control {
-    display: none;
+  .btn-loader {
+    width: 100% !important;
+  }
+
+  .btn-submit {
+    width: 100% !important;
   }
 
   @media only screen and (max-width: 768px) {
@@ -390,47 +390,17 @@
             site.ask_for_volunteers? %}
             <div class="form-group custom-control custom-checkbox">
               {% check_box "is_volunteer", class:"custom-control-input" %}
-              <label class="custom-control-label" for="signup_is_volunteer"
+              <label
+                class="custom-control-label title-text"
+                margin="12px"
+                for="signup_is_volunteer"
                 >{{ t_forms_want_to_volunteer }}</label
               >
             </div>
-            {% endif %} {% if request.sorta_logged_in? == false or
-            request.current_signup.has_mobile? == false %} {% unless
-            page.show_consent_form? %}
-            <div class="form-group">
-              <div class="custom-control custom-checkbox">
-                {% check_box "email_opt_in", class:"custom-control-input" %}
-                <label class="custom-control-label" for="signup_email_opt_in"
-                  >{{ t_forms_send_email_updates }}</label
-                >
-              </div>
-            </div>
-
-            {% if site.ask_for_mobiles? %}
-            <div class="form-group">
-              <div class="custom-control custom-checkbox">
-                {% check_box "mobile_opt_in", class:"custom-control-input" %}
-                <label class="custom-control-label" for="signup_mobile_opt_in"
-                  >{{ t_forms_send_text_updates }}</label
-                >
-              </div>
-            </div>
-            {% endif %} {% endunless %} {% endif %} {% if
-            page.show_consent_form? %} {% include "consent_form" %} {% endif %}
-            {% include "form_submit_tag", label: "Join our mailing list" %} {%
-            endform_for %} {% if page.text_keyword_instructions.size > 0 %}
-            <div class="form-group py-2">
-              {{ page.text_keyword_instructions }}
-            </div>
-            {% endif %}
+            {% endif %} {% include "form_submit_tag", label: "Join mailing list"
+            %} {% endform_for %}
           </div>
         </div>
-
-        {% if page.show_social_slider? and page.public_activities_count > 0 %}
-        <div class="card-social-slider">
-          {% include "social_slider" %}
-        </div>
-        {% endif %}
       </div>
 
       {% if page.tags_count > 0 %} {% include "page_tags" with page %} {% endif
