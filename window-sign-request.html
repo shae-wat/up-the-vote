@@ -1,172 +1,17 @@
-{% include "translation" %}
-<style>
-  a {
-    color: #2b3990;
-  }
-
-  a:hover {
-    color: #9a8abb !important;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .form-errors .errorExplanation h2,
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  }
-
-  button.btn-primary,
-  input.btn-primary,
-  a.btn-primary {
-    color: #ffffff !important;
-    background-color: #0d7cbd;
-    border-color: #0d7cbd;
-  }
-  button.btn-primary:hover,
-  input.btn-primary:hover,
-  a.btn-primary:hover {
-    color: #ffffff !important;
-    background-color: #9a8abb;
-    border-color: #9a8abb;
-  }
-
-  #signup-dropdown {
-    display: none !important;
-  }
-
-  .title-text {
-    font-weight: 900;
-    margin-bottom: 6px;
-  }
-
-  .header-image {
-    margin-top: 0;
-    margin-bottom: 24px;
-  }
-
-  .nav-item-login {
-    display: none;
-  }
-
-  .navbar-nav-primary {
-    margin-right: 12px;
-  }
-
-  .nav-link {
-    margin-right: 36px;
-  }
-
-  .secondary-content {
-    margin-top: 64px;
-  }
-
-  .graphic-content {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-
-  .card {
-    padding: 24px;
-    margin-bottom: 48px;
-  }
-
-  .card-row {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #custom-checkbox {
-    display: none;
-  }
-
-  .title-block {
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .title-yes {
-    font-weight: 900;
-  }
-
-  .title-for {
-    margin-top: -16px;
-    font-weight: 900;
-  }
-
-  .title-nov {
-    margin-top: 12px;
-    color: #666;
-  }
-
-  .title-cons {
-    margin-top: 6px;
-    color: #666;
-  }
-
-  .custom-control {
-    display: none;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .desktop-only {
-      display: none;
-    }
-    .header-image {
-      margin-top: 0;
-      margin-bottom: 6px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    .title-for {
-      margin-top: -8px;
-      line-height: 1;
-    }
-    .card-row {
-      flex-direction: column;
-    }
-  }
-  @media only screen and (min-width: 769px) {
-    .mobile-only {
-      display: none;
-    }
-  }
-</style>
+{% include "translation" %} {% include "social_share_widget" %}
 
 <div class="page">
-  <div class="row justify-content-center">
-    <div class="col-lg-10">
-      <div style="margin: auto; margin-bottom: 24px;">
-        <a href="https://www.upthevotesf.com/">
-          <img
-            id="logo-image-empty-homes-tax"
-            src="https://dsasf-62612.web.app/up-vote/banner-title.png"
-            width="100%"
-            alt="Yes on H- Move local elections to even years and double voter participation!"
-          />
-        </a>
-      </div>
-    </div>
-    </div>
+  <div class="page-inner">
+    {% include "breadcrumbs" %}
     <div class="row">
       <div class="col-lg-6">
-        <strong
-          ><h1 class="title-text">
-            Volunteer
-          </h1></strong
-        >
+        {% if page.headline.size > 0 %}
+        <h2 class="page-headline">{{ page.headline }}</h2>
+        {% endif %} {% if page.volunteer_signup.content.size > 0 %}
         <div class="page-content">
           {{ page.volunteer_signup.content }}
         </div>
+        {% endif %}
       </div>
 
       <div class="col-lg-6">
@@ -343,6 +188,14 @@
           </div>
           {% endif %}
         </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        {% if page.tags_count > 0 %} {% include "page_tags" with page %} {%
+        endif %} {% if page.show_stream? %} {% include "page_stream" %} {% endif
+        %}
       </div>
     </div>
   </div>
