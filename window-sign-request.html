@@ -85,10 +85,6 @@
     justify-content: space-between;
   }
 
-  #custom-checkbox {
-    display: none;
-  }
-
   .title-block {
     text-align: center;
     margin-bottom: 24px;
@@ -157,20 +153,45 @@
       </div>
     </div>
   </div>
+  <br />
+  <br />
   {% include "breadcrumbs" %}
   <div class="row">
     <div class="col-lg-6">
       <h2 class="title-text">Get a Window Sign</h2>
+      <img
+        style="margin: 36px 0;"
+        src="https://sfyes-74d32.web.app/up-vote/signs-grass.jpg"
+        alt="Signs for Prop H in English, Spanish, and Chinese lay on display in the grass"
+      />
       <div class="page-content">
         {{ page.volunteer_signup.content }}
       </div>
+      <img
+        style="margin-bottom: 36px;"
+        src="https://dsasf-62612.web.app/up-vote/poster-eng.png"
+        alt=""
+      />
+      <img
+        style="margin-bottom: 36px;"
+        src="https://dsasf-62612.web.app/up-vote/poster-spanish.png"
+        alt=""
+      />
+      <img
+        style="margin-bottom: 36px;"
+        src="https://dsasf-62612.web.app/up-vote/poster-chinese.png"
+        alt=""
+      />
     </div>
 
     <div class="col-lg-6">
       <div class="card card-md">
         <div class="card-body">
           <div class="form">
-            <h3 class="h4">Sign up to get a window sign delivered to you</h3>
+            <h3 class="h4 title-text" style="color: #0d7cbd;">
+              Sign up to get a window sign delivered to you
+            </h3>
+            <br />
             {% form_for volunteer_signup %}
 
             <div class="form-errors">
