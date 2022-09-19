@@ -1,201 +1,321 @@
-{% include "translation" %} {% include "social_share_widget" %}
+{% include "translation" %}
+<style>
+  a {
+    color: #2b3990;
+  }
+
+  a:hover {
+    color: #9a8abb !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .form-errors .errorExplanation h2,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  }
+
+  button.btn-primary,
+  input.btn-primary,
+  a.btn-primary {
+    color: #ffffff !important;
+    background-color: #0d7cbd;
+    border-color: #0d7cbd;
+  }
+  button.btn-primary:hover,
+  input.btn-primary:hover,
+  a.btn-primary:hover {
+    color: #ffffff !important;
+    background-color: #9a8abb;
+    border-color: #9a8abb;
+  }
+
+  #signup-dropdown {
+    display: none !important;
+  }
+
+  .title-text {
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
+  .header-image {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  .nav-item-login {
+    display: none;
+  }
+
+  .navbar-nav-primary {
+    margin-right: 12px;
+  }
+
+  .nav-link {
+    margin-right: 36px;
+  }
+
+  .secondary-content {
+    margin-top: 64px;
+  }
+
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #custom-checkbox {
+    display: none;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title-yes {
+    font-weight: 900;
+  }
+
+  .title-for {
+    margin-top: -16px;
+    font-weight: 900;
+  }
+
+  .title-nov {
+    margin-top: 12px;
+    color: #666;
+  }
+
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .custom-control {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .header-image {
+      margin-top: 0;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .title-for {
+      margin-top: -8px;
+      line-height: 1;
+    }
+    .card-row {
+      flex-direction: column;
+    }
+  }
+  @media only screen and (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+</style>
 
 <div class="page">
-  <div class="page-inner">
-    {% include "breadcrumbs" %}
-    <div class="row">
-      <div class="col-lg-6">
-        {% if page.headline.size > 0 %}
-        <h2 class="page-headline">{{ page.headline }}</h2>
-        {% endif %} {% if page.volunteer_signup.content.size > 0 %}
-        <div class="page-content">
-          {{ page.volunteer_signup.content }}
-        </div>
-        {% endif %}
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div style="margin: auto; margin-bottom: 24px;">
+        <a href="https://www.upthevotesf.com/">
+          <img
+            id="logo-image-empty-homes-tax"
+            src="https://dsasf-62612.web.app/up-vote/banner-title.png"
+            width="100%"
+            alt="Yes on H- Move local elections to even years and double voter participation!"
+          />
+        </a>
       </div>
-
-      <div class="col-lg-6">
-        <div class="card card-md">
-          <div class="card-body">
-            <div class="form">
-              {% if request.sorta_logged_in? %}
-              <div class="mb-4">
-                {% if request.current_signup.is_volunteer? %}
-                <h3 class="h4">{{ t_volunteer_we_have_you_as_volunteer }}</h3>
-                <p class="mt-2">{{ t_volunteer_update_info_below }}</p>
-                {% else %}
-                <h3 class="h4">{{ t_volunteer_can_you_volunteer }}</h3>
-                {% endif %} {% if request.logged_in? == false %}
-                <p class="mt-2">{{ t_account_not_you_sign_out }}</p>
-                {% endif %}
-              </div>
-              {% else %}
-              <h3 class="h4 mb-4">{{ t_volunteer_will_you_volunteer }}</h3>
-              {% endif %} {% form_for volunteer_signup %}
-
-              <div class="form-errors">
-                {% error_messages_for volunteer_signup %}
-              </div>
-
-              {% for volunteer_type in page.volunteer_signup.volunteer_types %}
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    {%if
-                    volunteer_signup.volunteer_type_ids
-                    contains
-                    volunteer_type.id
-                    %}checked{%endif%}
-                    id="volunteer_type_{{volunteer_type.id}}"
-                    name="volunteer_signup[volunteer_type_ids][]"
-                    value="{{volunteer_type.id}}"
-                  />
-                  <label
-                    for="volunteer_type_{{volunteer_type.id}}"
-                    class="custom-control-label"
-                    >{{ volunteer_type.name }}</label
-                  >
-                </div>
-              </div>
-              {% endfor %} {% hidden_field_tag
-              'volunteer_signup[volunteer_type_ids][]', '' %} {% if
-              request.sorta_logged_in? == false or
-              request.current_signup.has_name? == false %}
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <div class="float-label">
-                    <label for="volunteer_signup_first_name"
-                      >{{ t_forms_first_name }}</label
-                    >
-                    {% text_field "first_name", class:"form-control" %}
-                  </div>
-                </div>
-
-                <div class="form-group col-md-6">
-                  <div class="float-label">
-                    <label for="volunteer_signup_last_name"
-                      >{{ t_forms_last_name }}</label
-                    >
-                    {% text_field "last_name", class:"form-control" %}
-                  </div>
-                </div>
-              </div>
-              {% endif %} {% if request.sorta_logged_in? == false %}
-              <div class="form-group">
-                <div class="float-label">
-                  <label for="volunteer_signup_email"
-                    >{{ t_forms_email }}</label
-                  >
-                  {% email_field "email", class:"form-control" %}
-                </div>
-              </div>
-              {% endif %} {% if page.volunteer_signup.is_phone? %}
-              <div class="form-group">
-                <div class="float-label">
-                  <label for="volunteer_signup_phone_number"
-                    >{{ t_forms_phone }}</label
-                  >
-                  {% phone_field "phone_number", class:"form-control" %}
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="float-label">
-                  <label for="volunteer_signup_phone_time"
-                    >{{ t_forms_good_time_to_call }}</label
-                  >
-                  {% text_field "phone_time", class:"form-control" %}
-                </div>
-              </div>
-              {% endif %}
-
-              <div class="form-group">
-                <div class="float-label">
-                  <label for="volunteer_signup_availability"
-                    >{{ t_forms_when_are_you_available }}</label
-                  >
-                  {% text_field "availability", class:"form-control" %}
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="float-label">
-                  <label for="volunteer_signup_content"
-                    >{{ t_forms_comments_other_ideas }}</label
-                  >
-                  <div class="auto-grow">
-                    {% text_area "content", class:"form-control textarea" %}
-                  </div>
-                </div>
-              </div>
-
-              {% if page.volunteer_signup.is_address? and
-              request.sorta_logged_in? == false or
-              request.current_signup.has_full_address? == false %} {% include
-              "page_address_inputs" %} {% endif %} {% if
-              site.ask_to_publish_to_stream? %}
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  {% check_box "is_private", class:"custom-control-input" %}
-                  <label
-                    class="custom-control-label"
-                    for="volunteer_signup_is_private"
-                    >{{ t_forms_dont_publish_this }}</label
-                  >
-                </div>
-              </div>
-              {% endif %} {% if request.sorta_logged_in? == false %} {% unless
-              page.show_consent_form? %}
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  {% check_box "email_opt_in", class:"custom-control-input" %}
-                  <label
-                    class="custom-control-label"
-                    for="volunteer_signup_email_opt_in"
-                    >{{ t_forms_send_email_updates }}</label
-                  >
-                </div>
-              </div>
-
-              {% if site.ask_for_mobiles? %}
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  {% check_box "mobile_opt_in", class:"custom-control-input" %}
-                  <label
-                    class="custom-control-label"
-                    for="volunteer_signup_mobile_opt_in"
-                    >{{ t_forms_send_text_updates }}</label
-                  >
-                </div>
-              </div>
-              {% endif %} {% endunless %} {% endif %} {% if
-              page.show_consent_form? %}{% include "consent_form" %}{% endif %}
-
-              <div class="form-group">
-                {% include "form_submit_tag", label: t_volunteer_save_info %}
-              </div>
-
-              {% endform_for %}
-            </div>
-            <!-- /.form -->
-          </div>
-
-          {% if page.show_social_slider? and page.public_activities_count > 0 %}
-          <div class="card-social-slider">
-            {% include "social_slider" %}
-          </div>
-          {% endif %}
-        </div>
+    </div>
+  </div>
+  {% include "breadcrumbs" %}
+  <div class="row">
+    <div class="col-lg-6">
+      <h2 class="title-text">Get a Window Sign</h2>
+      <div class="page-content">
+        {{ page.volunteer_signup.content }}
       </div>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-        {% if page.tags_count > 0 %} {% include "page_tags" with page %} {%
-        endif %} {% if page.show_stream? %} {% include "page_stream" %} {% endif
-        %}
+    <div class="col-lg-6">
+      <div class="card card-md">
+        <div class="card-body">
+          <div class="form">
+            <h3 class="h4">Sign up to get a window sign delivered to you</h3>
+            {% form_for volunteer_signup %}
+
+            <div class="form-errors">
+              {% error_messages_for volunteer_signup %}
+            </div>
+
+            {% for volunteer_type in page.volunteer_signup.volunteer_types %}
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  {%if
+                  volunteer_signup.volunteer_type_ids
+                  contains
+                  volunteer_type.id
+                  %}checked{%endif%}
+                  id="volunteer_type_{{volunteer_type.id}}"
+                  name="volunteer_signup[volunteer_type_ids][]"
+                  value="{{volunteer_type.id}}"
+                />
+                <label
+                  for="volunteer_type_{{volunteer_type.id}}"
+                  class="custom-control-label"
+                  >{{ volunteer_type.name }}</label
+                >
+              </div>
+            </div>
+            {% endfor %} {% hidden_field_tag
+            'volunteer_signup[volunteer_type_ids][]', '' %} {% if
+            request.sorta_logged_in? == false or
+            request.current_signup.has_name? == false %}
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="float-label">
+                  <label for="volunteer_signup_first_name"
+                    >{{ t_forms_first_name }}</label
+                  >
+                  {% text_field "first_name", class:"form-control" %}
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <div class="float-label">
+                  <label for="volunteer_signup_last_name"
+                    >{{ t_forms_last_name }}</label
+                  >
+                  {% text_field "last_name", class:"form-control" %}
+                </div>
+              </div>
+            </div>
+            {% endif %} {% if request.sorta_logged_in? == false %}
+            <div class="form-group">
+              <div class="float-label">
+                <label for="volunteer_signup_email">{{ t_forms_email }}</label>
+                {% email_field "email", class:"form-control" %}
+              </div>
+            </div>
+            {% endif %} {% if page.volunteer_signup.is_phone? %}
+            <div class="form-group">
+              <div class="float-label">
+                <label for="volunteer_signup_phone_number"
+                  >{{ t_forms_phone }}</label
+                >
+                {% phone_field "phone_number", class:"form-control" %}
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="float-label">
+                <label for="volunteer_signup_phone_time"
+                  >{{ t_forms_good_time_to_call }}</label
+                >
+                {% text_field "phone_time", class:"form-control" %}
+              </div>
+            </div>
+            {% endif %}
+
+            <div class="form-group">
+              <div class="float-label">
+                <label for="volunteer_signup_availability"
+                  >{{ t_forms_when_are_you_available }}</label
+                >
+                {% text_field "availability", class:"form-control" %}
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="float-label">
+                <label for="volunteer_signup_content"
+                  >{{ t_forms_comments_other_ideas }}</label
+                >
+                <div class="auto-grow">
+                  {% text_area "content", class:"form-control textarea" %}
+                </div>
+              </div>
+            </div>
+
+            {% include "page_address_inputs" %} {% if
+            site.ask_to_publish_to_stream? %}
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                {% check_box "is_private", class:"custom-control-input" %}
+                <label
+                  class="custom-control-label"
+                  for="volunteer_signup_is_private"
+                  >{{ t_forms_dont_publish_this }}</label
+                >
+              </div>
+            </div>
+            {% endif %} {% if request.sorta_logged_in? == false %} {% unless
+            page.show_consent_form? %}
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                {% check_box "email_opt_in", class:"custom-control-input" %}
+                <label
+                  class="custom-control-label"
+                  for="volunteer_signup_email_opt_in"
+                  >{{ t_forms_send_email_updates }}</label
+                >
+              </div>
+            </div>
+
+            {% if site.ask_for_mobiles? %}
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                {% check_box "mobile_opt_in", class:"custom-control-input" %}
+                <label
+                  class="custom-control-label"
+                  for="volunteer_signup_mobile_opt_in"
+                  >{{ t_forms_send_text_updates }}</label
+                >
+              </div>
+            </div>
+            {% endif %} {% endunless %} {% endif %} {% if
+            page.show_consent_form? %}{% include "consent_form" %}{% endif %}
+
+            <div class="form-group">
+              {% include "form_submit_tag", label: "Get a Window Sign" %}
+            </div>
+
+            {% endform_for %}
+          </div>
+          <!-- /.form -->
+        </div>
       </div>
     </div>
   </div>
