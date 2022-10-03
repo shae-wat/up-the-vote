@@ -41,6 +41,11 @@
     display: none !important;
   }
 
+  .title-text {
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
   .header-image {
     margin-top: 0;
     margin-bottom: 24px;
@@ -62,28 +67,71 @@
     margin-top: 64px;
   }
 
-  .page-title {
+  .graphic-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .title-yes {
     font-weight: 900;
   }
 
-  .poster-image {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    width: 60%;
-    margin-right: auto;
-    margin-left: auto;
+  .title-for {
+    margin-top: -16px;
+    font-weight: 900;
   }
 
-  .page-content {
-    margin-bottom: 200px;
+  .title-nov {
+    margin-top: 12px;
+    color: #666;
+  }
+
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
+  }
+
+  .btn-loader {
+    width: 100% !important;
+  }
+
+  .btn-submit {
+    width: 100% !important;
   }
 
   @media only screen and (max-width: 768px) {
     .desktop-only {
       display: none;
     }
-    .poster-image {
-      width: 100%;
+    .header-image {
+      margin-top: 0;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .title-for {
+      margin-top: -8px;
+      line-height: 1;
+    }
+    .card-row {
+      flex-direction: column;
     }
   }
   @media only screen and (min-width: 769px) {
@@ -96,15 +144,159 @@
 <div class="page">
   <div class="row justify-content-center">
     <div class="col-lg-8">
-      <strong><h1 class="page-title">{{ page.headline }}</h1></strong>
-      <div class="page-content">
-        <img
-          src="https://dsasf-62612.web.app/up-vote/poster-chinese.png"
-          class="poster-image"
-          alt="三藩市未來選舉 增加投票率一倍 支持H提案"
-        />
-        {{ page.basic.content }}
+      <strong><h1 class="title-text">支持H提案</h1></strong>
+      <!--This will double the vote in our community, giving us a stronger voice in elections for Mayor, District Attorney, City Attorney, Treasurer and Sheriff.-->
+      <h2>
+        該提案將使我們社區的投票率增加一倍，讓我們在市長，地檢官，市府律師，市財務主管和縣警局長的選舉中擁有更大的發言權。
+      </h2>
+      <!--Prop H moves San Francisco’s single odd-year municipal election with an average 43% turnout rate onto the presidential election cycle— when turnout is double.-->
+      <p>
+        H提案將三藩市的一次奇數年市政選舉以平均43%的投票率推入總統選舉週期
+        ，當投票率翻倍時。
+      </p>
+      <!-- This election determines the most important positions in our city: Mayor, District Attorney, City Attorney, Sheriff, and Treasurer.-->
+      <p>
+        這次選舉決定了我們城市中最重要的職位：市長，治安官，地檢官，市府律師和財政部長。
+      </p>
+      <!--The Asian community turnout differential between even and odd year elections is one of the largest of any community in San Francisco.-->
+      <p>
+        亞裔社區選舉和奇數年選舉之間的投票率差異是三藩市所有社區中最大的一個。
+      </p>
+      <!--84% of registered Asian voters participated in the 2020 presidential year election compared to only 38% voting in 2019.-->
+      <p>
+        84%的登記亞裔選民參加了2020年總統年度選舉，而2019年只有38%的亞裔選民參加了選舉。
+      </p>
+      <!--Let’s move elections to even years when our community shows up to vote. Vote YES on Prop H.-->
+      <p>讓我們把選舉移到我們社區出現投票的偶數年。對提案H投贊成票</p>
+      <div class="card">
+        <div class="card-row">
+          <a href="https://www.commoncause.org/california/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-cc-ca.svg"
+              alt="California Common Cause"
+              width="224px"
+              height="auto"
+            />
+          </a>
+          <a href="https://lwvsf.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-lwvsf.png"
+              alt="League of Women Voters of San Francisco"
+              width="224px"
+              height="auto"
+            />
+          </a>
+          <a href="https://caasf.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/caa.svg"
+              alt="Chinese for Affirmative Action"
+              width="260px"
+              height="auto"
+            />
+          </a>
+        </div>
+        <div class="card-row">
+          <a
+            href="https://www.sfdemocrats.org/our-party/the-dccc"
+            target="_blank"
+          >
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sf-dem-party.png"
+              alt="San Francisco Democratic Party"
+              width="180px"
+              height="auto"
+            />
+          </a>
+          <a href="https://www.advancingjustice-alc.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-adv-just.png"
+              alt="Asian Americans Advancing Justice- Asian Law Caucus"
+              width="250px"
+              height="auto"
+            />
+          </a>
+          <a href="https://ifpte21.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/logo-ifpte-21.jpg"
+              alt="IFPTE Local 21"
+              width="224px"
+              height="auto"
+            />
+          </a>
+        </div>
+        <div class="card-row">
+          <a href="http://www.rosepakdemclub.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/Rose-Pak-Logo.png"
+              alt="Rose Pak Dem Club 白蘭民主黨協會"
+              width="250px"
+              height="auto"
+            />
+          </a>
+          <a href="https://www.sfchronicle.com/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/logo-sf-chron.png"
+              alt="San Francisco Chronicle"
+              width="224px"
+              height="auto"
+            />
+          </a>
+          <a href="https://sflaborcouncil.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sflc.png"
+              alt="San Francisco Labor Council"
+              width="224px"
+              height="auto"
+            />
+          </a>
+        </div>
       </div>
+      <p>
+        在過去十年中，三藩市的選民投票率在奇數年選舉中平均為43%，在總統選舉中平均為80%;
+        在有色人種社區，工人階級和年輕選民中，奇數年選民參與率最低。H提案不僅是為了提高選民投票率，而且還要確保更多的選民在城市選舉中擁有發言權。
+      </p>
+      <p>
+        還有：
+      </p>
+      <p>
+        ●
+        <a
+          target="_blank"
+          href="https://sfelections.sfgov.org/sites/default/files/Prop%20H%20-%20City%20Elections%20in%20Even%20Numbered%20Years%20-%20VIP.pdf"
+          >明年我們將節省約700萬美元的選舉費用</a
+        >
+      </p>
+      <p>
+        <a
+          target="_blank"
+          href="https://www.commoncause.org/california/wp-content/uploads/sites/29/2021/02/Consolidation-of-Elections-Creates-Massive-Gains-in-Local-Voter-Turnout.pdf"
+          >許多的加州城市已經轉向偶數年，如洛杉磯，並且在每個案例中都有更高的選民參與度。</a
+        >
+      </p>
+      <p>
+        選民參與是一個民權問題，我們有責任確保每個人的聲音都被聽到！
+      </p>
+      <br />
+      <img
+        class="header-image"
+        src="https://dsasf-62612.web.app/up-vote/SF-Election-Participation-2011-2020.png"
+        alt="SF Election Participation: 2011-2020 Odd-year vs even-year voter turnout in San Francisco. Bar chart showing half voter participation every other year, 80% average even-year turnout and 43% average odd-year turnout"
+      />
+      <br />
+      <img
+        src="https://dsasf-62612.web.app/up-vote/poster-chinese.png"
+        class="poster-image"
+        alt="三藩市未來選舉 增加投票率一倍 支持H提案"
+      />
     </div>
   </div>
 </div>
