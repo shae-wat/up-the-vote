@@ -110,6 +110,15 @@
     display: none;
   }
 
+  .graphic-vis-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 64px;
+    margin-bottom: 24px;
+  }
+
   @media only screen and (max-width: 768px) {
     .desktop-only {
       display: none;
@@ -193,8 +202,31 @@
           San Francisco turnout is dismal for this off-cycle, once every 4 years
           local election. 43% of voters on average are voting for the local
           Mayor, Sheriff, District Attorney, City Attorney, and Treasurer race
-          versus double — 80% — voting in presidential year election cycles.
+          versus
+          <strong
+            >double — 80% — voting in presidential year election cycles.</strong
+          >
         </p>
+        <div class="graphic-vis-row">
+          <h5>
+            <strong>Odd-year Mayoral Race</strong>
+          </h5>
+          <img
+            src="https://dsasf-62612.web.app/up-vote/vis-2019-mayoral.png"
+            width="50%"
+            alt="People chart visual, 4 out of 10 people"
+          />
+        </div>
+        <div class="graphic-vis-row">
+          <h5>
+            <strong>Even-year Presidential Race</strong>
+          </h5>
+          <img
+            src="https://dsasf-62612.web.app/up-vote/vis-2020-presidential.png"
+            width="50%"
+            alt="People chart visual, 8 out of 10 people"
+          />
+        </div>
         <p>
           There was a citywide turnout of
           <a
