@@ -19,13 +19,23 @@
   .h4,
   .h5,
   .h6 {
+    font-weight: bolder;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  }
+
+  h3 {
+    color: #f30906;
+    font-size: 2rem;
+  }
+
+  h4 {
+    color: #0d7cbd;
   }
 
   button.btn-primary,
   input.btn-primary,
   a.btn-primary {
-    color: #000000;
+    color: #ffffff !important;
     background-color: #0d7cbd;
     border-color: #0d7cbd;
   }
@@ -35,6 +45,20 @@
     color: #ffffff !important;
     background-color: #9a8abb;
     border-color: #9a8abb;
+  }
+
+  #signup-dropdown {
+    display: none !important;
+  }
+
+  .title-text {
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
+  .header-image {
+    margin-top: 0;
+    margin-bottom: 24px;
   }
 
   .nav-item-login {
@@ -58,12 +82,24 @@
     margin-bottom: 24px;
   }
 
+  .card {
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .title-block {
     text-align: center;
     margin-bottom: 24px;
   }
 
-  .page-title {
+  .title-yes {
     font-weight: 900;
   }
 
@@ -77,25 +113,50 @@
     color: #666;
   }
 
-  .poster-image {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    width: 60%;
-    margin-right: auto;
-    margin-left: auto;
+  .title-cons {
+    margin-top: 6px;
+    color: #666;
   }
 
-  .page-content {
-    margin-bottom: 200px;
+  .btn-loader {
+    width: 100% !important;
+  }
+
+  .btn-submit {
+    width: 100% !important;
+  }
+
+  .graphic-vis-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 64px;
+    margin-bottom: 24px;
+  }
+  .graphic-vis-row > img {
+    width: 50%;
   }
 
   @media only screen and (max-width: 768px) {
     .desktop-only {
       display: none;
     }
+    .header-image {
+      margin-top: 0;
+      margin-bottom: 6px;
+      margin-right: auto;
+      margin-left: auto;
+    }
     .title-for {
       margin-top: -8px;
       line-height: 1;
+    }
+    .card-row {
+      flex-direction: column;
+    }
+    .graphic-vis-row > img {
+      width: 80%;
     }
   }
   @media only screen and (min-width: 769px) {
@@ -104,30 +165,335 @@
     }
   }
 </style>
-{% include "translation" %}
 
 <div class="page">
-  {% include "breadcrumbs" %}
   <div class="row justify-content-center">
     <div class="col-lg-8">
-      <div class="title-block">
+      <strong><h1 class="title-text">支持H提案</h1></strong>
+      <!--Yes on H November 2022 — Double the Vote in Local San Francisco
+      Elections!-->
+      <h2>
+        Sí a la H de noviembre de 2022: ¡duplica el voto en las elecciones
+        locales de San Francisco!
+      </h2>
+      <!--November 2022's Prop H moves San Francisco’s odd-year municipal election
+      with an average 43% turnout rate onto the presidential election cycle—
+      when turnout is double.-->
+      <h3>
+        La Prop H de noviembre de 2022 traslada las elecciones municipales de
+        año impar de San Francisco con una tasa de participación promedio del
+        43% al ciclo de elecciones presidenciales, cuando la participación es el
+        doble.
+      </h3>
+      <!-- This election determines the most important positions in our city: Mayor, District Attorney, City Attorney, Sheriff, and Treasurer.-->
+      <p>
+        Esta elección determina los cargos más importantes en nuestra ciudad:
+        Alcalde, Fiscal de Distrito, Fiscal Municipal, Alguacil y Tesorero.
+      </p>
+      <!--Moving elections to even years is proudly endorsed by:-->
+      <h4 class="title-cons">
         <strong>
-          <h1 class="page-title">¡Duplica el voto!</h1>
-          <h2 class="title-for">¡Vota SÍ a la H!</h2>
+          Mover las elecciones de la ciudad a los años pares está respaldado con
+          orgullo por:
         </strong>
+      </h4>
+      <div class="card">
+        <div class="card-row">
+          <a href="https://cpasf.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/cpa-logo.svg"
+              alt="Chinese Progressive Association"
+              width="224px"
+              height="auto"
+            />
+          </a>
+          <a href="http://www.rosepakdemclub.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/Rose-Pak-Logo.png"
+              alt="Rose Pak Dem Club 白蘭民主黨協會"
+              width="250px"
+              height="auto"
+            />
+          </a>
+          <a href="https://caasf.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/caa.svg"
+              alt="Chinese for Affirmative Action"
+              width="260px"
+              height="auto"
+            />
+          </a>
+        </div>
+        <div class="card-row">
+          <a href="https://www.advancingjustice-alc.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-adv-just.png"
+              alt="Asian Americans Advancing Justice- Asian Law Caucus"
+              width="250px"
+              height="auto"
+            />
+          </a>
+          <a href="https://lwvsf.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-lwvsf.png"
+              alt="League of Women Voters of San Francisco"
+              width="224px"
+              height="auto"
+            />
+          </a>
+          <a href="https://ifpte21.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/logo-ifpte-21.jpg"
+              alt="IFPTE Local 21"
+              width="224px"
+              height="auto"
+            />
+          </a>
+        </div>
+        <div class="card-row">
+          <a href="https://nuhw.org" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/nuhw_dark.jpg"
+              alt="National Union of Healthcare Workers"
+              width="275px"
+              height="auto"
+            />
+          </a>
+          <a href="https://www.sfchronicle.com/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/endorsers/logo-sf-chron.png"
+              alt="San Francisco Chronicle"
+              width="224px"
+              height="auto"
+            />
+          </a>
+          <a href="https://sflaborcouncil.org/" target="_blank">
+            <img
+              class="graphic-content"
+              src="https://dsasf-62612.web.app/up-vote/endorsements/logo-sflc.png"
+              alt="San Francisco Labor Council"
+              width="224px"
+              height="auto"
+            />
+          </a>
+        </div>
       </div>
-      <div class="page-content">
-        <img
-          src="https://dsasf-62612.web.app/up-vote/poster-spanish.png"
-          class="poster-image"
-          alt="Si a H Duplica El Voto en las elecciones locales"
-        />
-        <h4 class="title-nov">
-          Esta medida duplicará el voto en nuestra comunidad, ofreciéndonos una
-          voz más fuerte en las elecciones para alcalde, fiscal de distrito,
-          fiscal municipal, tesorero, y alguacil.
-        </h4>
+      <!--Over the last decade, voter turnout in San Francisco has averaged 43% in odd-year elections and 80% in presidential cycles; with the lowest odd-year voter participation amongst communities of color, the working class, and young voters. Prop H isn’t just about increasing voter turnout but also ensuring that more voters will have a say in city elections-->
+      <p>
+        在過去十年中，三藩市的選民投票率在奇數年選舉中平均為43%，在總統選舉中平均為80%;
+        在有色人種社區，工人階級和年輕選民中，奇數年選民參與率最低。H提案不僅是為了提高選民投票率，而且還要確保更多的選民在城市選舉中擁有發言權。
+      </p>
+      <!--Plus:-->
+      <p>
+        還有：
+      </p>
+      <!--We’ll save about $7M next year in election costs-->
+      <p>
+        ●
+        <a
+          target="_blank"
+          href="https://sfelections.sfgov.org/sites/default/files/Prop%20H%20-%20City%20Elections%20in%20Even%20Numbered%20Years%20-%20VIP.pdf"
+          >明年我們將節省約700萬美元的選舉費用</a
+        >
+      </p>
+      <!--Many cities in CA have already switched to even-years, like Los Angeles, and have seen higher voter participation in every case-->
+      <p>
+        ●
+        <a
+          target="_blank"
+          href="https://www.commoncause.org/california/wp-content/uploads/sites/29/2021/02/Consolidation-of-Elections-Creates-Massive-Gains-in-Local-Voter-Turnout.pdf"
+          >許多的加州城市已經轉向偶數年，如洛杉磯，並且在每個案例中都有更高的選民參與度。</a
+        >
+      </p>
+      <!--Voter participation is a cornerstone civil rights issue and it is on us to make sure everyone's voice is heard!-->
+      <p>
+        選民參與是一個民權問題，我們有責任確保每個人的聲音都被聽到！
+      </p>
+      <img
+        src="https://dsasf-62612.web.app/up-vote/h-party-hanson.jpg"
+        class="graphic-content"
+        alt="Hanson Lee and Dean Preston smile at a Prop H fundraising party holding window signs in support of H"
+      />
+      <br />
+      <!--Frequently Asked Questions-->
+      <h2>常見問題</h2>
+      <br />
+      <!--San Francisco generally has high voter engagement. Will this measure make a significant difference here?-->
+      <h4>
+        <strong
+          >三藩市的選民參與度通常很高。這項措施會在這裡產生重大影響嗎？</strong
+        >
+      </h4>
+      <div class="card">
+        <!--San Francisco turnout is dismal for this off-cycle, once every 4 years local election. 43% of voters on average are voting for the local Mayor, Sheriff, District Attorney, City Attorney, and Treasurer race versus double — 80% — voting in presidential year election cycles.-->
+        <p>
+          三藩市的投票率令人沮喪，因為這個非週期，每四年一次的本地選舉。平均而言，43%的選民投票支援當地市長，治安官，地檢官，市府律師和財政部長競選，而在總統年度選舉週期中，投票率為雙倍（
+          80%）。
+        </p>
+        <div class="graphic-vis-row">
+          <img
+            src="https://dsasf-62612.web.app/up-vote/vis-2019-mayoral.png"
+            alt="People chart visual, 4 out of 10 people"
+          />
+        </div>
+        <div class="graphic-vis-row">
+          <img
+            src="https://dsasf-62612.web.app/up-vote/vis-2020-presidential.png"
+            alt="People chart visual, 8 out of 10 people"
+          />
+        </div>
+        <!--There was a citywide turnout of 41% of registered voters in November 2019 and 86% in November 2020. In 2020, 79% San Francisco youth under age 24 voted versus only 21% in 2019.-->
+        <p>
+          2019年11月，全市登記選民的投票率為<a
+            target="_blank"
+            href="https://sfelections.sfgov.org/november-5-2019-election-results-summary"
+            >41%</a
+          >，2020年11月為<a
+            href="https://sfelections.sfgov.org/november-3-2020-election-results-summary"
+            target="_blank"
+            >86%</a
+          >。2020年，79%的24歲以下三藩市年輕人投票，而2019年只有<a
+            href="https://sfyes-74d32.web.app/up-vote/2019-voter-turnout-by-age.pdf"
+            target="_blank"
+            >21%</a
+          >。
+        </p>
+        <!--We have an opportunity to double — and in the case of the youth quadruple — the number of people showing up to vote for important officials in San Francisco by simply moving these elections to presidential year cycles.-->
+        <p>
+          我們有機會把參加三藩市重要官員投票的人數增加一倍：在青年人數方面是翻了兩番；只需把這些選舉推遲到總統年週期。
+        </p>
       </div>
+      <!--I heard this changes the signature threshold for ballot measures. Can you explain that?-->
+      <h4>
+        <strong>我聽說這改變了投票措施的簽名門檻。你能解釋一下嗎？</strong>
+      </h4>
+      <div class="card">
+        <!--The measure changes HOW the signature threshold is calculated, but leaves the number of signatures required almost exactly the same.-->
+        <p>該度量值更改了簽名閾值的計算方式，但所需的簽名數幾乎完全相同。</p>
+        <!--Currently, signature thresholds to qualify a citizen initiative are 5% of the turnout for the last Mayoral race. Doubling turnout for the Mayoral race would double the signature threshold needed to qualify a citizen initiative.-->
+        <p>
+          目前，公民倡議的簽名門檻是上一屆市長競選投票率的5%。市長競選的投票率增加一倍將使公民倡議獲得資格所需的簽名門檻增加一倍。
+        </p>
+        <!--We wanted to make sure it is no easier or harder to qualify a measure for the ballot, so the signature threshold was adjusted to be 2% of the number of total registered voters, rather than counting on the low turnout for the mayor’s race. This results in about the same number of signatures to qualify a ballot measure.-->
+        <a
+          href="https://sfelections.sfgov.org/sites/default/files/CityElectionsinEven-NumberedYears_Legal%20Text.pdf"
+          target="_blank"
+        >
+          <p>
+            我們希望確保使一項措施有資格參加投票並不容易或更難，因此簽名門檻被調整為登記選民總數的2%，而不是指望市長競選的低投票率。這導致大約相同數量的簽名來限定投票措施。
+          </p>
+        </a>
+      </div>
+      <!--Won’t this make an already long presidential ballot even longer?-->
+      <h4>
+        <strong>這不會使已經很長的總統投票更加漫長的嗎？</strong>
+      </h4>
+      <div class="card">
+        <!--This will make the presidential ballot longer, but the tradeoff is that it would ensure the most powerful people in the City are being elected when voters actually show up to vote.-->
+        <a
+          href="https://www.commoncause.org/california/resource/getting-to-100/"
+          target="_blank"
+        >
+          <p>
+            這將使總統選票更長，但權衡是，當選民實際出現投票時，它將確保紐約市最有權勢的人當選。
+          </p>
+        </a>
+        <!--Most people in SF know how they are voting for president, VP, etc— but we are currently missing their voices for the local offices of Mayor, Sheriff, District Attorney, City Attorney, and Treasurer.-->
+        <p>
+          三藩市的大多數人都知道他們如何投票選舉總統，副總裁等，但我們目前錯過了他們對市長，治安官，地檢官，市府律師和財政部長等的聲音。
+        </p>
+        <!--In 2020 local propositions at the end of the presidential year ballot saw 6-7% loss in voter participation due to undervoting— so it would take at least 8-10 times as many undervotes as end-of-ballot local props to even compare to the lack of participation we are seeing in odd-year elections.-->
+        <p>
+          在2020年總統年投票結束時，由於投票不足，本地提案的選民參與度下降了
+          <a
+            href="https://sfelections.sfgov.org/november-3-2020-election-results-summary"
+            target="_blank"
+            >6-7%</a
+          >:因此，投票不足至少需要8-10倍於投票結束的本地道具，才能與我們在奇數年選舉中看到的缺乏參與進行比較。
+        </p>
+        <!--We want inspiring and exciting candidates for these local races that voters will not skip on after they are able to make it to the ballot.-->
+        <p>
+          我們希望這些本地比賽的候選人鼓舞人心和令人興奮，選民在能夠參加投票後不會跳過。
+        </p>
+      </div>
+      <!--Won’t we lose the opportunity to pass important bonds/ballot measures?-->
+      <h4>
+        <strong>我們難道不會失去通過重要債券投票提案的機會嗎？</strong>
+      </h4>
+      <div class="card">
+        <!--We should be maximizing the number of people voting for these bonds and measures for them to be truly democratic.-->
+        <p>
+          我們應該最大限度地增加投票支持這些債券的人數，並採取措施使它們成為真正民主的方式。
+        </p>
+        <!--Popular measures will pass more easily with a broad voter base participating in the election. Off-cycle elections can favor big-money interests since funding simply goes to a get-out-the-vote effort for specific groups to show up for the vote.-->
+        <p>
+          民眾措施將更容易通過，因為有廣泛的選民基礎參與選舉。非週期選舉可能有利於大筆利益，因為資金只是用於特定群體的投票努力。
+        </p>
+      </div>
+      <!--Will this give another year to the Mayor?-->
+      <h4>
+        <strong>這會給市長再過一年嗎？</strong>
+      </h4>
+      <div class="card">
+        <!--Next year, 2023, the election for Mayor, Sheriff, District Attorney, City Attorney, and Treasurer will be rescheduled to 2024, giving these offices another year before the 2024 election.-->
+        <p>
+          明年2023年，市長，治安官，地檢官，市府律師和財政部長的選舉將重新安排到2024年，使這些辦公室在2024年大選前再過一年。
+        </p>
+        <!--By not having these elections in 2023 the City Controller estimated about $7 million in savings for next year and we don’t have to add another election to our schedule for 2023.-->
+        <p>
+          由於2023年沒有舉行這些選舉，市主計長估計明年將節省約700萬美元，我們不必在2023年的時程表上增加另一次選舉。
+        </p>
+      </div>
+      <!--Who has endorsed this?-->
+      <h4>
+        <strong>誰支持這個提案？</strong>
+      </h4>
+      <div class="card">
+        <!--Supervisor Dean Preston put the SF Voter Participation Act on the ballot with the support of Supervisors Ronen, Stefani, Peskin, Chan, Safai, and Melgar— so it's broadly supported by progressive and moderate SF supervisors.-->
+        <p>
+          市參事潘正義(Dean Preston)將SF選民參與法案放在選票上，還有市參事盧凱利
+          (Hillary Ronen)，司嘉怡 (Catherine Stefani)，佩斯金 (Aaron
+          Peskin)，陳詩敏 (Connie Chan)，安世輝 (Ahsha Safai)， 和梅義加 (Myrna
+          Melgar) 們致詞
+        </p>
+        <!--Endorsements were led by good government, non-partisan voting rights organizations like California Common Cause, the League of Women Voters of San Francisco, RepresentUs, and Advancing Justice- Asian Law Caucus.-->
+        <p>
+          背書包括有好政府，無黨派投票權組織領導，如加州共同事業，三藩市婦女選民聯盟，代表美國和推進正義
+          - 亞洲法律核心小組。
+        </p>
+        <!--Prop H is endorsed by everyone from the San Francisco Democratic Party to the San Francisco Labor Council and the Public Health Justice Collective. See the endorsements page for the full list of endorsements.-->
+        <p>
+          H提案有三藩市民主黨到三藩市勞工委員會和公共衛生正義集體的支持。請在背書網頁以查看全部的背書。
+        </p>
+      </div>
+      <!--I would like to better understand how this will impact recall elections.-->
+      <h4>
+        <strong>我想更好地瞭解這將如何影響罷免選舉。</strong>
+      </h4>
+      <div class="card">
+        <!--This measure impacts the scheduling of the off-cycle, once-every-four-years Municipal Election for the offices of the Mayor, Sheriff, District Attorney, City Attorney, and Treasurer.-->
+        <p>
+          這項措施影響了市長，治安官，地檢官，市府律師和財政部長的非週期、每四年一次市政選舉的日程安排。
+        </p>
+        <!--It does NOT impact special elections like recalls.-->
+        <p>
+          提案不會影響像召回這樣的特別選舉。
+        </p>
+      </div>
+      <img
+        src="https://dsasf-62612.web.app/up-vote/h-logo-chinese.png"
+        class="graphic-content"
+        alt="三藩市未來選舉 增加投票率一倍 支持H提案"
+        style="max-width: 500px; width: 100%;"
+      />
     </div>
   </div>
 </div>
